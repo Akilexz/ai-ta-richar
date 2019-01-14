@@ -1,0 +1,159 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Publicaciones</h4>
+        <p class="card-category">Sistema para realizar publicaciones</p>
+        <div class="row">
+          <div class="subitem col-lg-6 rowup col-md-3 col-sm-3"></div>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div id="typography">
+          <div class="card-body">
+            <div id="typography">
+              <script src="validar.js"></script>
+              <table class="table">
+                <div class="col-12">
+                  <form action="registro" method="post" class="form-register" onsubmit="return validar();">
+                    <th>
+                      Nombre
+                      <input [(ngModel)]="nombreone" #nombre="ngModel" type="text" id="nombre" name="nombre"
+                        placeholder="nombre" mainlength="15" maxlength="100 " class="form-control" size="50" required />
+                      <div *ngIf="nombre.touched &&  !nombre.valid">
+                        <div *ngIf="nombre.errors.required">Nombre es requerido</div>
+                        <div *ngIf="nombre.errors.minlength">Nombre debe ser de al menos
+                          {{nombre.errors.minlength.requiredLength}}caractres.</div>
+                      </div>
+                    </th>
+
+                    <th>
+                      Prioridad
+                      <select name="publicacion" id="" (ngModelChange)="selectOption($event)" (ngModel)="publicacion"></select>
+                      <option [ngValue]="baja">
+                        Baja
+                      </option>
+                      <option [ngValue]="Media">
+                        Media
+                      </option>
+                      <option [ngValue]="Alta">
+                        Alta
+                      </option>
+                    </th>
+
+                    <th>
+                      Fecha
+                      <input [(ngModel)]="dateTree" #date="ngModel" type="date" id="date" name="date" placeholder="date"
+                        mainlength="15" maxlength="16" class="form-control" size="90" required />
+                      <div style="margin-left: 60px"></div>
+                      <div *ngIf="date.touched &&  !date.valid">
+                        <div *ngIf="date.errors.required">Fecha es requerido</div>
+                        <div *ngIf="date.errors.minlength">Fecha debe ser de al menos
+                          {{Fecha.errors.minlength.requiredLength}}caractres.</div>
+                      </div>
+                      <div style="margin-left: 60px">
+                      </div>
+                    </th>
+
+                    <div class="col-12">
+                      <th>
+                        Texto
+                        <input [(ngModel)]="textoTwo" #texto="ngModel" type="text" id="texto" name="texto" placeholder="texto"
+                          mainlength="15" maxlength="666" class="form-control" size="80" required />
+                        <div *ngIf="texto.touched &&  !texto.valid">
+                          <div *ngIf="texto.errors.required">texto es requerido</div>
+                          <div *ngIf="texto.errors.minlength">texto debe ser de al menos
+                            {{texto.errors.minlength.requiredLength}}caractres.</div>
+                        </div>
+                      </th>
+
+                      <th>
+                        Tipo
+                        <div style="margin-left: 30px">
+                        </div>
+                        <div style="margin-left: 1px">
+
+                        </div>
+
+                      </th>
+
+                      <th>
+                        Nombre del destino
+                        <div style="margin-left: 100px">
+                        </div>
+                        <div style="margin-left: 100px">
+                          <tr *ngFor="let destino of destinos">
+                            <td>{{destino.Nombre}
+                            </td>
+                          </tr>
+                        </div>
+                      </th>
+
+                      <th>
+                        Archivo
+                        <li class="nav-item dropdown">
+                          <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">library_add</i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="card-body">
+                              <div id="typography">
+                                <div class="row">
+                                  <div class="col-6">
+                                    <table class="table">
+                      <th>Nombre del destino</th>
+                      <tr *ngFor="let destino of destinos ">
+                        <td>{{destino.desId}}
+                        </td>
+                        <td>{{destino.nombre}}
+                        </td>
+                      </tr>
+                      <label>Escriba su descripcion</label>
+              </table>
+              <textarea rows="5" cols="100" class="form-control ">
+                                                        </textarea>
+
+              <div class="custom-file">
+                <input type="file" id="customFileLang" lang="es">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </li>
+    </th>
+  </div>
+  </form>
+
+
+  <title>cambiando option</title>
+  <style type="text/css">
+    option {
+      font-family: Verdana, Arial;
+      font-size: 12px;
+      background-color: #e9e9e9;
+    }
+  </style>
+  <table>
+    <th>
+      <table>
+        <br>
+        <br>
+        <a type="button" class="btn btn-success btn-round" (click)="savePublicaciones(publicacion)" title="Aceptar"  title="Aceptar"
+          role="alert">Aceptar
+      </a>
+      </table>
+    </th>
+  </table>
+</div>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

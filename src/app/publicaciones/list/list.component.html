@@ -1,0 +1,61 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <p class="card-category">Sistema para realizar publicaciones</p>
+                <div class="row">
+                    <div class="col-12">
+                        <a mat-raised-button type="submit" class="btn btn-round btn-sm pull-right" href="/publicaciones/create" title="crear"> crear
+                            <i class="material-icons">add</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="typography">
+                    <div class="card-title">
+                        <h2> Publicaciones</h2>
+                    </div>
+                    <table class="table">
+
+
+                        <th>Nombre</th>
+                        <th>Texto</th>
+                        <th>Prioridad</th>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th></th>
+                        <th></th>
+
+                        <tr *ngFor="let publicacion of  publicaciones">
+
+
+
+                            <td>{{publicacion.pubNombre}}
+                            </td>
+                            <td>{{publicacion.pubTexto}}
+                            </td>
+                            <td>{{publicacion.pubPrioridad}}
+                            </td>
+                            <td>{{publicacion.pubFecha}}
+                            </td>
+                            <td>{{publicacion.pubTipo}}
+                            </td>
+                            <td>
+                                <button   value="Actualizar" title="Actualizar" class="form-control"  (click)="onEditar(publicacion)"><i class="material-icons">cached
+                                    </i></button>
+                            </td>
+                                        <td>
+                                <button value="Eliminar" title="Eliminar" class="form-control" (click)="delatePublicaciones(publicacion)"><i class="material-icons" >delete_sweep
+                                    </i></button>
+                            </td>
+                             
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

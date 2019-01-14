@@ -1,0 +1,41 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <p class="card-category">Sistema para realizar publicaciones</p>
+                <div class="row">
+                    <div class="col-12">
+                        <button mat-raised-button class="btn btn-round btn-sm pull-right">
+                            <i class="material-icons">add</i>
+                            <a href="/publicaciones/edit" title="crear">crear</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="typography">
+                    <div class="card-title">
+                        <h2> Publicaciones</h2>
+                    </div>
+
+
+                    <table class="table">
+
+
+                        <th>Nombre</th>
+
+                        <tr *ngFor="let opcion of opciones">
+
+
+                            <td>{{ opcion.nombre}}
+                            </td>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

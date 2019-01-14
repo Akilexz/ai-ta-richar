@@ -1,0 +1,36 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <div class="row">
+                    <div class="col-12">
+                        <button mat-raised-button class="btn btn-round btn-sm pull-right">
+                            <i class="material-icons">save</i>
+                            <a href="/destino/destinoList" title="Listo">Listo</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+                <div class="card-body">
+                    <div id="typography">
+                        <div class="row">
+                            <div class="col-6">
+                                <label>Escriba su descripcion</label>
+                                <textarea rows="5" cols="100" class="form-control ">
+                                    </textarea>
+
+                                <div class="custom-file">
+                                    <input type="file" id="customFileLang" lang="es">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p-calendar [(ngModel)]='date' [inline]="true"></p-calendar>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <p class="card-category">Sistema para realizar publicaciones</p>
+                <button mat-raised-button class="btn btn-round btn-sm pull-right">
+                    <i class="material-icons">add</i>
+                    <a href="/opcion/opcionList" title="listo">listo</a>
+                </button>
+            </div>
+
+            <div class="card-body">
+                <div id="typography">
+
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+                    </div>
+                    <table class="table">
+                        <th>Id</th>
+                        <th>Archivo</th>
+                     
+                        <th>URL</th>
+
+                        <tr *ngFor="let detalle of detalle">
+
+                            <td>{{detalle.Id}}
+                            </td>
+                            <td>{{detalle.Archivo}}
+                            </td>
+                         >
+                            <td>{{detalle.URL}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

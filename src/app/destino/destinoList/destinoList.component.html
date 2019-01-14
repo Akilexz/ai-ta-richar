@@ -1,0 +1,36 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <p class="card-category">Sistema para realizar publicaciones</p>
+                <button mat-raised-button class="btn btn-round btn-sm pull-right">
+                    <i class="material-icons">add</i>
+                    <a href="/detalle/detalleList" title="Detalle">Detalle</a>
+                </button>
+            </div>
+
+            <div class="card-body">
+                <div id="typography">
+
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+                    </div>
+                    <table class="table">
+                        <th>Id</th>
+                        <th>Nombre del destino</th>
+
+                        <tr *ngFor="let destino of destinos">
+
+                            <td>{{destino.desId}}
+                            </td>
+                            <td>{{destino.nombre}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

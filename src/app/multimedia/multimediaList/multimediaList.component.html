@@ -1,0 +1,52 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <div class="row">
+                    <div class="col-12">
+                        <button mat-raised-button class="btn btn-round btn-sm pull-right">
+                            <i class="material-icons">add</i>
+                            <a href="/publicaciones/publicacionesList" title="Listo">Listo</a>
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="card-body">
+                <div id="typography">
+                    <div class="row">
+                        <div class="col-12">
+                            <textarea rows="5" cols="100" class="form-control " pInputTextarea pInputTextarea
+                                autoResize= "autoResize" >
+                                <input type="file" name="photo" ng2FileSelect [uploader]= "uploader"/>  
+                            
+                                <button type="button" class="btn btn-success btn-s" 
+                                  (click)= "uploader.uploadAll()" 
+                                  [disabled]="!uploader.getNotUploadedItems().length" >
+                                      Upload an Imagen
+                                </button> 
+                            </textarea>
+                        </div>
+                    </div>
+                </div>                       
+                        <div class="col-6">
+                            <p-calendar [(ngModel)]="date" [inline]="true"></p-calendar>
+                        </div>
+                        <table class="table">
+                        <th>Id</th>
+                        <th>Nombre del destino</th>
+
+                        <tr *ngFor="let Destino of Destino">
+
+                            <td>{{Destino.Id}}
+                            </td>
+                            <td>{{Destino.Nombre}}
+                            </td>
+                        
+                        </tr>
+                    </table>
+                
+            </div>
+        </div>
+    </div>
+</div> 

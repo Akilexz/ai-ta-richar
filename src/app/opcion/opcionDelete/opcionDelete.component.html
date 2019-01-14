@@ -1,0 +1,60 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <p class="card-category">Sistema para realizar publicaciones</p>
+                <div class="row">
+                    <div class="col-12">
+                        <button mat-raised-button class="btn btn-round btn-sm pull-right">
+                            
+                            <i class="material-icons">settings
+                               
+                                <select name="lista" id="lista">
+                                    <option value="photo ">photo</option>
+                                    <option value="attach_file">attach_file</option>
+                                    <option value="videocam"> videocam</option>
+                                </select>
+                            </i>
+
+                            
+                        </button>
+                        <button  mat-raised-button class="btn btn-round btn-sm pull-right">
+                            <i class="material-icons">save</i>
+                            
+                            <a href="/publicaciones/list" title="Guardar">Guardar</a>
+                            
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-body">
+                <div id="typography">
+                    <div class="card-title">
+                        <h2>Publicación</h2>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <textarea rows="5" cols="100" class="form-control " pInputTextarea pInputTextarea
+                                autoResize="autoResize"></textarea>
+                            <button mat-raised-button class="btn btn-success btn-round btn-sm pull-left">
+                                <i class="material-icons">attach_file</i>Archivo
+                            </button>
+                            <button mat-raised-button class="btn btn-success btn-round btn-sm pull-left">
+                                <i class="material-icons">photo</i>Imagen</button>
+                            <button mat-raised-button class="btn btn-success btn-round btn-sm pull-left">
+                                <i class="material-icons">videocam</i>Video</button>
+                        </div>
+                        <div class="col-6">
+                            <p-calendar [(ngModel)]="date" [inline]="true"></p-calendar>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

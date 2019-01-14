@@ -1,0 +1,36 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <p class="card-category">Sistema para realizar publicaciones</p>
+            </div>
+
+            <div class="card-body">
+                <div id="typography">
+
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+                    </div>
+                    <table class="table">
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Estado</th>
+                        <th>Tipo</th>
+
+                        <tr *ngFor="let tipoPublicacion of tipoPublicacion">
+
+                            <td>{{tipoPublicacion.Id}}
+                            </td>
+                            <td>{{tipoPublicacion.Nombre}}
+                            </td>
+                            <td>{{tipoPublicacion.Estado}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
